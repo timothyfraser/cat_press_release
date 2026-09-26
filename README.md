@@ -14,4 +14,14 @@ Some key considerations:
 
 ---
 
+## Benchmark (September 2026)
+
+`benchmark_2026-09-26/` times the current production REPORTER on 100 randomly
+sampled US counties, from the click on **Generate press release** to the
+downloaded Word file: mean 1.78 s (SD 0.27, SE 0.027). The folder has the R and
+Node scripts that ran it, the raw per-county timings, the summary statistics,
+and a zip of every press release the run generated. See its README.
+
+---
+
 For questions, reach out to Dr. Tim Fraser <tmf77@cornell.edu>, Systems Engineering @ Cornell University
