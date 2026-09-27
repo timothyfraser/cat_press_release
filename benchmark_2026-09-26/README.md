@@ -18,7 +18,7 @@ generated.
 | minimum | 1.506 |
 | maximum | 3.135 |
 
-The 100 counties span 34 states and all 14 standard time steps (1990, and
+The 100 counties span 34 states and all 14 sampled years (1990, and
 every fifth year from 2000 to 2060). Reaching 100 complete press releases took
 103 draws. The three that did not count:
 

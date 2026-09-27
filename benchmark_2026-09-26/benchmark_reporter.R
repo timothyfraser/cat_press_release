@@ -8,7 +8,7 @@
 #
 # Steps
 #   1. sample   draw counties from the CAT area catalog (seeded) and a year for
-#               each from CATSERVER's 14 standard time steps
+#               each from 14 sampled years (1990 and every fifth year, 2000-2060)
 #   2. time     bench/time_reporter.mjs drives the REPORTER page in headless
 #               Chromium: for each county it clicks "Generate press release" and
 #               times until the .docx download completes. That span is everything
@@ -52,7 +52,7 @@ public_base = Sys.getenv("PUBLIC_BASE", "https://connect.systems-apps.com/cat-pu
 n_counties  = as.integer(Sys.getenv("N_COUNTIES", "100"))
 seed        = as.integer(Sys.getenv("BENCH_SEED", "20260925"))
 oversample  = as.integer(Sys.getenv("OVERSAMPLE", "20"))   # spare draws, used only if a county fails
-years       = c(1990L, seq(2000L, 2060L, by = 5L))         # CATSERVER's 14 standard time steps
+years       = c(1990L, seq(2000L, 2060L, by = 5L))         # 14 sampled years: 1990 and every fifth year, 2000-2060
 # Paths are relative to this script's own folder, so it runs unchanged from the
 # paper repo (bench/) or the public replication repo (benchmark_2026-09-26/).
 script_arg  = grep("^--file=", commandArgs(FALSE), value = TRUE)
