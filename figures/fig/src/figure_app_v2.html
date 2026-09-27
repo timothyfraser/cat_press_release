@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: #ffffff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  }
+  #page {
+    width: 1272px;
+    padding: 30px 44px 40px 44px;
+    background: #ffffff;
+  }
+  #header {
+    width: 1184px;
+    font-size: 32px;
+    line-height: 1.32;
+    color: #5b7ae0;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+  #header .accent {
+    color: #17181c;
+    font-weight: 700;
+  }
+  #stage {
+    position: relative;
+    width: 1184px;
+    height: 512px;
+  }
+  #shot {
+    position: absolute;
+    left: 90px;
+    top: 15px;
+    width: 1004px;
+    height: 497px;
+    display: block;
+    border: 1px solid #d7dbe6;
+    border-radius: 4px;
+  }
+  .outline {
+    position: absolute;
+    border: 2px solid #648fff;
+    border-radius: 8px;
+    background: rgba(100, 143, 255, 0.05);
+    pointer-events: none;
+  }
+  .leader {
+    position: absolute;
+    background: #648fff;
+  }
+  .callout {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #648fff;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Inter', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  }
+</style>
+</head>
+<body>
+<div id="page">
+
+  <div id="header">
+    Choose your area, year and pollutant&hellip;<br>
+    Pick a breakdown, chart and format&hellip;<br>
+    <span>Then</span> <span class="accent">Generate!</span>
+  </div>
+
+  <div id="stage">
+    <img id="shot" src="figure_app_v2_crop.png" alt="REPORTER interface">
+
+    <!-- ===== control outlines (container coords = 90+cropX, 15+cropY) ===== -->
+    <!-- Area: crop x45-396,y194-232 -->
+    <div class="outline" style="left:133px; top:207px; width:355px; height:42px;"></div>
+    <!-- Year: crop x412-588,y194-232 -->
+    <div class="outline" style="left:500px; top:207px; width:180px; height:42px;"></div>
+    <!-- Pollutant: crop x604-780,y194-232 -->
+    <div class="outline" style="left:692px; top:207px; width:180px; height:42px;"></div>
+    <!-- Breakdown: crop x795-971,y194-232 -->
+    <div class="outline" style="left:883px; top:207px; width:180px; height:42px;"></div>
+    <!-- Chart: crop x45-396,y292-330 -->
+    <div class="outline" style="left:133px; top:305px; width:355px; height:42px;"></div>
+    <!-- Format: crop x412-588,y292-330 -->
+    <div class="outline" style="left:500px; top:305px; width:180px; height:42px;"></div>
+    <!-- Generate button: crop x45-215,y330-365.5 -->
+
+    <!-- ===== leader lines ===== -->
+    <!-- 1 Area: horizontal from left margin to control left edge -->
+    <div class="leader" style="left:65px; top:227px; width:70px; height:2px;"></div>
+    <!-- 5 Chart: horizontal -->
+    <div class="leader" style="left:65px; top:325px; width:70px; height:2px;"></div>
+    <!-- 7 Generate: horizontal, from button right edge(307) to circle -->
+    <div class="leader" style="left:311px; top:362px; width:449px; height:2px;"></div>
+    <!-- 2 Year: vertical, from control bottom to circle top -->
+    <div class="leader" style="left:589px; top:249px; width:2px; height:16px;"></div>
+    <!-- 3 Pollutant: vertical -->
+    <div class="leader" style="left:781px; top:249px; width:2px; height:16px;"></div>
+    <!-- 4 Breakdown: vertical -->
+    <div class="leader" style="left:972px; top:249px; width:2px; height:16px;"></div>
+    <!-- 6 Format: horizontal, from control right edge(680) to circle -->
+    <div class="leader" style="left:680px; top:325px; width:38px; height:2px;"></div>
+
+    <!-- ===== numbered callout circles ===== -->
+    <!-- 1 Area -->
+    <div class="callout" style="left:34px; top:213px;">1</div>
+    <!-- 2 Year -->
+    <div class="callout" style="left:575px; top:265px;">2</div>
+    <!-- 3 Pollutant -->
+    <div class="callout" style="left:767px; top:265px;">3</div>
+    <!-- 4 Breakdown -->
+    <div class="callout" style="left:958px; top:265px;">4</div>
+    <!-- 5 Chart -->
+    <div class="callout" style="left:34px; top:311px;">5</div>
+    <!-- 6 Format -->
+    <div class="callout" style="left:718px; top:311px;">6</div>
+    <!-- 7 Generate press release -->
+    <div class="callout" style="left:760px; top:348px;">7</div>
+  </div>
+
+</div>
+</body>
+</html>
